@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="camera_pkg" name="camera_show_node" type="camera_show_node.py" output="screen"/>
+    <node pkg="camera_pkg" name="image_input_node" type="image_input_node.py" output="screen"/>
+</launch>

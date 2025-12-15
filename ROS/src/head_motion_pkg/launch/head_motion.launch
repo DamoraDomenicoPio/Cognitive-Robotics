@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="head_motion_pkg" name="head_motion_node" type="head_motion_node.py" output="screen"/>
+</launch>

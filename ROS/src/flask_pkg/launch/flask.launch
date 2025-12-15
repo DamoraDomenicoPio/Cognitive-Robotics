@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="flask_pkg" name="flask_node" type="flask_server.py" output="screen"/>
+</launch>

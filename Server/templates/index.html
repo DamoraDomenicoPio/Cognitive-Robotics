@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tua Pagina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .checkbox-container {
+            text-align: left;
+        }
+
+        .checkbox-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .checkbox-item {
+            margin-bottom: 10px;
+        }
+
+        .color-form {
+            display: none;
+            margin-left: 20px;
+        }
+
+        .color-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .gender-location-form{
+            display: none;
+            margin-left: 20px;
+        }
+
+        .gender-location-form{
+            display: none;
+            margin-left: 20px;
+        }
+
+        .hat-form{
+            display: none;
+            margin-left: 20px;
+        }
+
+        .bag-form{
+            display: none;
+            margin-left: 20px;
+        }
+
+        #submitBtn {
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pepper</h1>
+    </header>
+
+    <main>
+        <h2>Make sentence</h2>
+        <p>Choose two things and make the sentences.</p>
+
+        <div class="container">
+            <div class="checkbox-container">
+                <ul class="checkbox-list">
+                    <li class="checkbox-item">
+                        <input type="checkbox" id="upper_color_checkbox" class="limit-checkbox"> Upper Color
+                    </li>
+                    <div class="color-form" id="upper_color_form">
+                        <label class="form-label" for="upper_color">Select a color:</label>
+                        <select id="upper_color" name="upper_color">
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="brown">Brown</option>
+                            <option value="gray">Gray</option>
+                            <option value="green">Green</option>
+                            <option value="orange">Orange</option>
+                            <option value="pink">Pink</option>
+                            <option value="purple">Purple</option>
+                            <option value="red">Red</option>
+                            <option value="white">White</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
+                        <input type="checkbox" id="negation_upper_color_checkbox" class="negation-checkbox"> Negation
+                    </div>
+                    <li class="checkbox-item">
+                        <input type="checkbox" id="lower_color_checkbox" class="limit-checkbox"> Lower Color
+                    </li>
+                    <div class="color-form" id="lower_color_form">
+                        <label class="form-label" for="lower_color">Select a color:</label>
+                        <select id="lower_color" name="lower_color">
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="brown">Brown</option>
+                            <option value="gray">Gray</option>
+                            <option value="green">Green</option>
+                            <option value="orange">Orange</option>
+                            <option value="pink">Pink</option>
+                            <option value="purple">Purple</option>
+                            <option value="red">Red</option>
+                            <option value="white">White</option>
+                            <option value="yellow">Yellow</option>
+                        </select>
+                        <input type="checkbox" id="negation_lower_color_checkbox" class="negation-checkbox"> Negation
+                    </div>
+                    <li class="checkbox-item">
+                        <input type="checkbox" id="hat_checkbox" class="limit-checkbox"> Hat
+                    </li>
+                    <div class="hat-form" id="hat_form">
+                        <label class="form-label" for="hat">Does it have the hat?</label>
+                        <select id="hat" name="hat">
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                        </select>
+                    </div>
+                    <li class="checkbox-item">
+                        <input type="checkbox" id="bag_checkbox" class="limit-checkbox"> Bag
+                    </li>
+                    <div class="bag-form" id="bag_form">
+                        <label class="form-label" for="bag">Does it have the bag?</label>
+                        <select id="bag" name="bag">
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                        </select>
+                    </div>
+                    <li class="checkbox-item">
+                        <input type="checkbox" id="gender_checkbox" class="limit-checkbox"> Gender
+                    </li>
+                    <div class="gender-location-form" id="gender_form">
+                        <label class="form-label" for="gender">Select a gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <li class="checkbox-item">
+                        <input type="checkbox" id="location_checkbox" class="limit-checkbox"> Location
+                    </li>
+                    <div class="gender-location-form" id="location_form">
+                        <label class="form-label" for="location">Select a location:</label>
+                        <select id="location" name="location">
+                            <option value="bar">roi1</option>
+                            <option value="atrio cues">roi2</option>
+                        </select>
+                    </div>
+                </ul>
+            </div>
+
+
+
+            <button id="submitBtn" onclick="submitFormValues()">Send</button>
+    
+    
+
+    
+
+    
+
+        </div>
+    
+        <script>
+            var upperColorCheckbox = document.getElementById('upper_color_checkbox');
+            var upperColorForm = document.getElementById('upper_color_form');
+            var lowerColorCheckbox = document.getElementById('lower_color_checkbox');
+            var lowerColorForm = document.getElementById('lower_color_form');
+            var genderCheckbox = document.getElementById('gender_checkbox');
+            var genderForm = document.getElementById('gender_form');
+            var hatCheckbox = document.getElementById('hat_checkbox');
+            var hatForm = document.getElementById('hat_form');
+            var bagCheckbox = document.getElementById('bag_checkbox');
+            var bagForm = document.getElementById('bag_form');
+            var locationCheckbox = document.getElementById('location_checkbox');
+            var locationForm = document.getElementById('location_form');
+    
+            function toggleFormVisibility(checkbox, form) {
+                form.style.display = checkbox.checked ? 'block' : 'none';
+            }
+    
+            upperColorCheckbox.addEventListener('change', function() {
+                toggleFormVisibility(this, upperColorForm);
+            });
+    
+            lowerColorCheckbox.addEventListener('change', function() {
+                toggleFormVisibility(this, lowerColorForm);
+            });
+    
+            genderCheckbox.addEventListener('change', function() {
+                toggleFormVisibility(this, genderForm);
+            });
+
+            hatCheckbox.addEventListener('change', function() {
+                toggleFormVisibility(this, hatForm);
+            });
+
+            bagCheckbox.addEventListener('change', function() {
+                toggleFormVisibility(this, bagForm);
+            });
+    
+            locationCheckbox.addEventListener('change', function() {
+                toggleFormVisibility(this, locationForm);
+            });
+        </script>
+    
+
+    </main>
+
+    <script>
+        var checkboxes = document.querySelectorAll('.limit-checkbox');
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                var checkedCheckboxes = document.querySelectorAll('.limit-checkbox:checked');
+
+                if (checkedCheckboxes.length > 2) {
+                    this.checked = false;
+                }
+
+                checkboxes.forEach(function(cb) {
+                    if (checkedCheckboxes.length === 2 && !cb.checked) {
+                        cb.disabled = true;
+                    } else {
+                        cb.disabled = false;
+                    }
+                });
+            });
+        });
+
+        function submitFormValues() {
+            var selectedForms = [];
+            
+            var checkboxes = document.querySelectorAll('.limit-checkbox:checked');
+
+            checkboxes.forEach(function(checkbox) {
+                var formId = checkbox.id.replace('_checkbox', '_form');
+                var form = document.getElementById(formId);
+
+                if (form) {
+
+                    var formData = {};
+
+                    var selects = form.querySelectorAll('select');
+                    selects.forEach(function(select) {
+                        if (select.name == "upper_color" || select.name == "lower_color"){
+                            var negationCheckboxId = 'negation_' + select.name + '_checkbox';
+                            var negationCheckbox = document.getElementById(negationCheckboxId);
+                            if (negationCheckbox && negationCheckbox.checked) {
+                                formData[select.name] = 'not_' + select.value;
+                            } else {
+                                formData[select.name] = select.value;
+                            }
+                        }
+                        else{
+                            formData[select.name] = select.value;
+                        }
+                    });
+
+
+                    selectedForms.push(formData);
+                }
+            });
+
+
+            // Invia i dati al tuo PC di destinazione
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://10.0.1.109:8080"); // Sostituisci con l'indirizzo del tuo PC di destinazione
+            xhr.setRequestHeader("Content-Type", "application/json");
+            xhr.send(JSON.stringify(selectedForms));
+
+            console.log(selectedForms);
+            // Qui puoi inviare i dati tramite AJAX o qualsiasi altra logica necessaria
+        }
+    </script>
+
+
+    <footer>
+        <p>© Group 1</p>
+    </footer>
+
+</body>
+</html>

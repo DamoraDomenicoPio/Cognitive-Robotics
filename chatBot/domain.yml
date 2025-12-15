@@ -1,0 +1,292 @@
+version: "3.1"
+
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- ask_number_people   # può contenere anche un luogo/tempo specifico (nelle entità)
+- ask_find_person  # contiene anche ask_bag_presence, ecc nelle entità
+- nlu_fallback
+- my_nlu_fallback             # TODO-> dove ho comprato il latte?
+- inform                     # l'utente vuole rispondere ad un form 
+- dunno                   # l'utente non conosce la risposta alla domanda 
+
+
+entities:
+- gender
+- color
+- upper_cloth
+- lower_cloth
+- bag_presence        # TODO: se necessario cambiare a bag_color
+- hat_presence            # TODO: se necessario cambiare a hat_color
+- negation
+- number
+- location
+- comparison_sign
+
+# - location
+# - passages_number
+# - persistence_time
+# - comparison_sign
+# - negation
+# - time_ago  # hai vito mio figlio {time_ago} (es. 10 min fa)
+#  - number_of_persons # Può chiedere per esempio: ci sono più di 10 persone?
+
+
+slots:
+  upper_color:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+    - type: from_entity
+      entity: color
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: upper_color
+    - type: from_intent
+      intent: dunno
+      value: 'unknown'
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: upper_color
+
+  lower_color:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+    - type: from_entity
+      entity: color
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: lower_color
+    - type: from_intent
+      intent: dunno
+      value: 'unknown'
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: lower_color
+
+  hat_presence:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom
+    - type: from_entity
+      entity: hat_presence
+    - type: from_intent
+      intent: affirm
+      value: 'true' 
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: hat_presence
+    - type: from_intent
+      intent: deny
+      value: 'false'
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: hat_presence
+    - type: from_intent
+      intent: dunno
+      value: 'unknown'
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: hat_presence
+
+  bag_presence:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: custom 
+    - type: from_entity
+      entity: bag_presence
+    - type: from_intent
+      intent: affirm
+      value: 'true'
+      conditions:
+      - active_loop: find_person_form
+        requested_slot: bag_presence
+    - type: from_intent
+      intent: deny
+      value: 'false'
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: bag_presence
+    - type: from_intent
+      intent: dunno
+      value: 'unknown'
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: bag_presence
+
+  
+  dummy: 
+    type: any
+    mappings:
+    - type: custom
+      action: global_slot_mapping
+
+  gender:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: gender
+    - type: from_intent
+      intent: deny
+      value: "True"
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: gender
+    - type: from_intent
+      intent: affirm
+      value: "False"
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: gender
+    - type: from_intent
+      intent: dunno
+      value: 'unknown'
+      conditions: 
+      - active_loop: find_person_form
+        requested_slot: gender
+
+  upper_cloth:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: upper_cloth
+
+  lower_cloth:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: lower_cloth
+  
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: location
+
+  comparison_sign:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: comparison_sign
+
+  number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: number
+
+  negation:
+    type: bool
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: negation
+
+
+  # time_ago:
+  #   type: text  # text perché contiene anche l'unità di misura 
+  #   influence_conversation: true
+  #   mappings:
+  #   - type: from_entity
+  #     entity: time_ago
+
+
+forms:
+  find_person_form:
+    required_slots:
+      - upper_color
+      - lower_color
+      - gender
+      - bag_presence
+      - hat_presence
+
+
+responses:
+  utter_greet:  # greet
+  - text: "Hi, I'm Pepper. I can help you to find someone or inform you about the number of people in the shops. How can i assist you?"
+
+  utter_cheer_up:   # mood_unhappy
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_happy:   # mood_great
+  - text: "Great, carry on!"
+
+  utter_goodbye:  # goodbye
+  - text: "Bye"
+  - text: "Goodbye! If you have more questions, feel free to ask."
+
+  utter_imabot:   # bot_challenge
+  - text: "I am a bot, powered by Rasa."
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_I_dont_know: # TODO: cambiare il nome?
+  - text: "I'm so sorry but I can't answer this question. Try another question."
+
+  # utter_affirm: # TODO: vedi se va bene
+  # - text: "I'm glad I answered your question correctly :)."
+
+  # utter_deny: # TODO: vedi se va bene
+  # - text: "I'm sorry I didn't answer your question correctly :(."
+
+  utter_ask_find_person_form_upper_color: 
+  - text: "What's the color of the shirt?"
+
+  utter_ask_find_person_form_lower_color:
+  - text: "What color are the pants or the skirt?"
+
+  utter_ask_find_person_form_bag_presence:
+  - text: "Is the person that you're looking for wearing a bag?"
+
+  utter_ask_find_person_form_hat_presence:
+  - text: "Can you tell me if the person that you're looking for is wearing a hat?"
+
+  utter_ask_find_person_form_gender:
+  - text: "Is the person female?"
+
+  utter_submit_find_persons:
+  - text: "Ok! I'll look for the person that you described..."
+
+actions: 
+- action_find_person
+- action_number_people
+- utter_greet
+- utter_goodbye
+- utter_imabot
+- utter_I_dont_know   # TODO: cambiare il nome?
+- utter_ask_find_person_form_upper_color
+- utter_ask_find_person_form_lower_color
+- utter_ask_find_person_form_bag_presence
+- utter_ask_find_person_form_hat_presence
+- utter_ask_find_person_form_gender
+- utter_submit_find_persons
+# - utter_affirm # TODO: vedi se va bene 
+# - utter_deny # TODO: vedi se va bene 
+# action_ask_gender  # TODO se faremo i form 
+# action_ask_upper_clothing_color
+# action_ask_lower_clothing_color
+# action_ask_bag_presence -> ha una borsa? 
+# action_ask_hat_presence
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

@@ -1,0 +1,218 @@
+# version: "3.1"
+
+# stories:
+
+# # BASICS -----------------------------------
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: bot challenge
+#   steps: 
+#   - intent: greet 
+#   - action: utter_greet
+#   - intent: bot_challenge
+#   - action: utter_imabot
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   # - action: utter_did_that_help
+#   # - intent: affirm
+#   # - action: utter_happy
+
+# # - story: sad path 2
+# #   steps:
+# #   - intent: greet
+# #   - action: utter_greet
+# #   - intent: mood_unhappy
+# #   - action: utter_cheer_up
+#   # - action: utter_did_that_help
+#   # - intent: deny
+#   # - action: utter_goodbye
+
+
+# # NUMBER PEOPLE -----------------------------------
+
+# - story: number people path 0.1
+#   steps:
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: goodbye
+#   - action: utter_goodbye 
+
+# - story: number people path 0.2
+#   steps:
+#   - intent: ask_number_people
+#   - action: action_number_people
+
+# - story: number people path 1
+#   steps: 
+#   - intent: greet 
+#   - action: utter_greet
+#   - intent: ask_number_people
+#   - action: action_number_people
+
+# - story: number people path 2
+#   steps: 
+#   - intent: greet 
+#   - action: utter_greet
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: goodbye
+#   - action: utter_goodbye 
+
+
+# # - story: number people path 3
+# #   steps: 
+# #   - intent: greet 
+# #   - action: utter_greet
+# #   - intent: ask_number_people
+# #   - action: action_number_people
+# # - action: utter_did_that_help
+# # - intent: affirm
+# # - action: utter_happy
+
+# # - story: number people path 4
+# #   steps: 
+# #   - intent: greet 
+# #   - action: utter_greet
+# #   - intent: ask_number_people
+# #   - action: action_number_people
+# #   - action: utter_did_that_help
+# #   - intent: deny
+# #   - action: utter_goodbye   # cambiare con un ipotetico utter_sorry? 
+
+# # FIND PERSON -----------------------------------
+
+# - story: find person path 0.1
+#   steps:
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: goodbye
+#   - action: utter_goodbye 
+
+# - story: find person path 0.2
+#   steps:
+#   - intent: ask_find_person
+#   - action: action_find_person
+
+# - story: find person path 1
+#   steps: 
+#   - intent: greet 
+#   - action: utter_greet
+#   - intent: ask_find_person
+#   - action: action_find_person
+
+# - story: find person path 2
+#   steps: 
+#   - intent: greet 
+#   - action: utter_greet
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: goodbye
+#   - action: utter_goodbye 
+
+# # - story: find person path 3
+# # steps: 
+# # - intent: greet 
+# # - action: utter_greet
+# # - intent: ask_find_person
+# # - action: action_find_person
+# # - action: utter_did_that_help
+# # - intent: affirm
+# # - action: utter_happy
+
+# # - story: find person path 4
+# #   steps: 
+# #   - intent: greet 
+# #   - action: utter_greet
+# #   - intent: ask_find_person
+# #   - action: action_find_person
+#   # - action: utter_did_that_help
+#   # - intent: deny
+#   # - action: utter_goodbye   # cambiare con un ipotetico utter_sorry? 
+
+# # FIND MIXED number_people and find_person -----------------------------------
+
+# - story: ask number people and find person 0.1
+#   steps: 
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: ask_find_person
+#   - action: action_find_person
+
+# - story: ask number people and find person 0.2
+#   steps: 
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+
+# - story: ask number people and find person 1
+#   steps: 
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: ask_find_person
+#   - action: action_find_person
+
+# - story: ask number people and find person 2
+#   steps: 
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# # FIND MIXED find_person and number_people -----------------------------------
+
+# - story: ask find person and number people 0.1
+#   steps: 
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: ask_number_people
+#   - action: action_number_people
+
+# - story: ask find person and number people 0.2
+#   steps: 
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+
+# - story: ask find person and number people 1
+#   steps: 
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: ask_number_people
+#   - action: action_number_people
+
+# - story: ask find person and number people 2
+#   steps: 
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - intent: ask_number_people
+#   - action: action_number_people
+#   - intent: goodbye
+#   - action: utter_goodbye

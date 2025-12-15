@@ -1,0 +1,506 @@
+[
+  {
+    "text": "y",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.32600271701812744
+    }
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.9999698400497437
+    }
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9443657994270325
+    }
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.529399037361145
+    }
+  },
+  {
+    "text": "unhappy",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7100510001182556
+    }
+  },
+  {
+    "text": "Tell mi about the people went to the bar for more zero times and for longer fifty-eight times in unisa store",
+    "intent": "ask_find_person",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "do you know the position of the man wearing the white jumper?",
+    "intent": "ask_find_person",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.7805843949317932
+    }
+  },
+  {
+    "text": "My watch is faster than yours.",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9999996423721313
+    }
+  },
+  {
+    "text": "I want to know the recipe of carbonara",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 0.5378775596618652
+    }
+  },
+  {
+    "text": "probably",
+    "intent": "dunno",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.9891112446784973
+    }
+  },
+  {
+    "text": "what can you do?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.9999970197677612
+    }
+  },
+  {
+    "text": "hi what can you do?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.9883887767791748
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9801108241081238
+    }
+  },
+  {
+    "text": "it's true",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.7793633341789246
+    }
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.9999896287918091
+    }
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9971938133239746
+    }
+  },
+  {
+    "text": "How many bodies have been observed for surpassed twenty-one times in the bar and in unisa store for inferior fifty-one times?",
+    "intent": "ask_number_people",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9889165163040161
+    }
+  },
+  {
+    "text": "Look at the blackboard!",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9772558808326721
+    }
+  },
+  {
+    "text": "nothing to say",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.590445339679718
+    }
+  },
+  {
+    "text": "is there a difference between a virus and a bacteria?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9174113869667053
+    }
+  },
+  {
+    "text": "she's wearing a pink skirt",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9492003917694092
+    }
+  },
+  {
+    "text": "the trousers are green",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.592352032661438
+    }
+  },
+  {
+    "text": "maybe",
+    "intent": "dunno",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.1873941868543625
+    }
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.3409167230129242
+    }
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.8157743215560913
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.24606919288635254
+    }
+  },
+  {
+    "text": "see you around",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9999998807907104
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.8582549691200256
+    }
+  },
+  {
+    "text": "i like the juventus",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.78230220079422
+    }
+  },
+  {
+    "text": "how many bookes are in your library?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "How many pets do you have?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Telle me how many brothers and sisters do you have?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "what do you think of Harry Styles?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 0.9999924898147583
+    }
+  },
+  {
+    "text": "he's wearing black trousers",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9999996423721313
+    }
+  },
+  {
+    "text": "he's wearing a white t-shirt",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "hey",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.43581363558769226
+    }
+  },
+  {
+    "text": "hey dude",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.9868189096450806
+    }
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.39740580320358276
+    }
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.9007135033607483
+    }
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "mood_unhappy",
+      "confidence": 0.8638967275619507
+    }
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4190925359725952
+    }
+  },
+  {
+    "text": "I am disappointed",
+    "intent": "mood_unhappy",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.5025656819343567
+    }
+  },
+  {
+    "text": "Where did you're friend go on vacation?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.9970276951789856
+    }
+  },
+  {
+    "text": "what are the benifits of exersize?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 0.9999774694442749
+    }
+  },
+  {
+    "text": "How mani choclates are in the box?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "How many siblings do you have?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "What genres of music are there?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "how can I make meat",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "moin",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform",
+      "confidence": 0.28570014238357544
+    }
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "mood_great",
+      "confidence": 0.8871403932571411
+    }
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 0.9997956156730652
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "dunno",
+      "confidence": 0.28212782740592957
+    }
+  },
+  {
+    "text": "I don't think so",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.974155068397522
+    }
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "intent_prediction": {
+      "name": "my_nlu_fallback",
+      "confidence": 0.26358678936958313
+    }
+  },
+  {
+    "text": "how many people attended the concert last night?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "how many countries are there in the European Union?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_number_people",
+      "confidence": 0.9672328233718872
+    }
+  },
+  {
+    "text": "Where can I find a good pizza place in Naples?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 0.6571310758590698
+    }
+  },
+  {
+    "text": "what can't a celiac eat?",
+    "intent": "my_nlu_fallback",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.7049576640129089
+    }
+  },
+  {
+    "text": "the jumper is yellow",
+    "intent": "inform",
+    "intent_prediction": {
+      "name": "ask_find_person",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "dunno",
+    "intent": "dunno",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.7022278308868408
+    }
+  }
+]

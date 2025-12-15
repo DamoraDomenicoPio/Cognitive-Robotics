@@ -1,0 +1,67 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_imabot
+
+- rule: Greet anytime the user greets
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: give info when ask number people 
+  steps: 
+  - intent: ask_number_people
+  - action: action_number_people
+
+# - rule: give location when user asks to find a person 
+#   steps: 
+#   - intent: ask_find_person
+#   - action: action_find_person
+#   - action: utter_did_that_help # TODO: ricorda di toglierlo se fai i form
+
+- rule: response given when the bot cannot answer # aggiunto
+  steps:
+  - intent: nlu_fallback
+  - action: utter_I_dont_know
+
+# - rule: response given when the bot responded correctly 
+#   steps:
+#   - intent: affirm
+#   - action: utter_affirm
+
+# - rule: response given when the bot did not respond correctly 
+#   steps:
+#   - intent: deny
+#   - action: utter_deny
+
+- rule: Activate form 
+  steps: 
+  - intent: ask_find_person
+  - action: find_person_form
+  - active_loop: find_person_form
+
+- rule: Submit find person form 
+  condition: 
+  - active_loop: find_person_form 
+  steps: 
+  - action: find_person_form
+  - active_loop: null
+  - slot_was_set: 
+    - requested_slot: null
+  - action: utter_submit_find_persons
+  - action: action_find_person
+
+  
+- rule: my_nlu_fallback
+  steps:
+    - intent: my_nlu_fallback
+    - action: utter_I_dont_know
